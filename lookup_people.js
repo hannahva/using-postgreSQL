@@ -21,7 +21,7 @@ client.connect((error) => {
       return console.error("error running query", error);
     };
     console.log(`Found ${result.rows.length} person(s) by the name ${input}:`);
-    console.log(`- ${result.rows[0].id}: ${result.rows[0].first_name} ${result.rows[0].last_name}, born '${result.rows[0].birthdate}'`);
+    console.log(`- ${result.rows[0].id}: ${result.rows[0].first_name} ${result.rows[0].last_name}, born '${result.rows[0].birthdate.toString().substring(4, 15)}'`);
 
     client.end();
   });
