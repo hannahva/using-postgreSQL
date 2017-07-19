@@ -33,6 +33,7 @@ knex.select().from('famous_people').asCallback((error, result) => {
     }
     printPerson(result);
     printPeople(result);
+  }).then(() => {
     knex.destroy();
   });
 });
